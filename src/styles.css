@@ -167,10 +167,10 @@ select {
 .hero {
   position: relative;
   display: grid;
-  min-height: 76svh;
+  min-height: 70svh;
   overflow: hidden;
-  align-items: end;
-  padding: 136px 24px 86px;
+  align-items: center;
+  padding: 132px 24px 72px;
   background: var(--ink);
   color: #fff;
 }
@@ -181,16 +181,16 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  opacity: 0.6;
+  object-position: center right;
+  opacity: 0.3;
 }
 
 .hero__shade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(16, 35, 31, 0.95), rgba(16, 35, 31, 0.74) 42%, rgba(16, 35, 31, 0.22)),
-    linear-gradient(180deg, rgba(16, 35, 31, 0.32), rgba(16, 35, 31, 0.72));
+    linear-gradient(90deg, rgba(16, 35, 31, 0.97), rgba(16, 35, 31, 0.9) 44%, rgba(16, 35, 31, 0.5)),
+    linear-gradient(180deg, rgba(16, 35, 31, 0.1), rgba(16, 35, 31, 0.52));
 }
 
 .hero__content {
@@ -215,18 +215,18 @@ select {
 }
 
 .hero h1 {
-  max-width: 800px;
+  max-width: 920px;
   margin: 0;
-  font-size: 6rem;
-  line-height: 0.95;
+  font-size: 5.45rem;
+  line-height: 1;
   letter-spacing: 0;
 }
 
 .hero__lead {
-  max-width: 760px;
+  max-width: 740px;
   margin: 24px 0 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 1.34rem;
+  font-size: 1.28rem;
   line-height: 1.45;
 }
 
@@ -307,7 +307,7 @@ select {
 .proof-strip strong {
   display: block;
   color: var(--green-dark);
-  font-size: 2rem;
+  font-size: 1.35rem;
   line-height: 1.1;
 }
 
@@ -317,6 +317,14 @@ select {
   margin-top: 8px;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.proof-strip--outcomes .proof-strip__item {
+  min-height: 118px;
+}
+
+.proof-strip--outcomes span {
+  max-width: 280px;
 }
 
 .section {
@@ -822,22 +830,23 @@ select {
   }
 
   .hero {
-    min-height: 78svh;
-    padding: 122px 18px 66px;
+    min-height: 72svh;
+    padding: 112px 18px 58px;
   }
 
   .hero__background {
-    object-position: 62% center;
+    object-position: 66% center;
+    opacity: 0.24;
   }
 
   .hero__shade {
     background:
-      linear-gradient(90deg, rgba(16, 35, 31, 0.94), rgba(16, 35, 31, 0.76)),
-      linear-gradient(180deg, rgba(16, 35, 31, 0.28), rgba(16, 35, 31, 0.78));
+      linear-gradient(90deg, rgba(16, 35, 31, 0.96), rgba(16, 35, 31, 0.9)),
+      linear-gradient(180deg, rgba(16, 35, 31, 0.2), rgba(16, 35, 31, 0.68));
   }
 
   .hero h1 {
-    font-size: 4.2rem;
+    font-size: 3.5rem;
   }
 
   .hero__lead {
@@ -914,6 +923,6 @@ select {
   }
 
   .proof-strip strong {
-    font-size: 1.72rem;
+    font-size: 1.22rem;
   }
 }
