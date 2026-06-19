@@ -56,6 +56,33 @@ select {
   font: inherit;
 }
 
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 800;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.skip-link:focus-visible {
+  opacity: 1;
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 .site-header {
   position: fixed;
   z-index: 50;
@@ -228,6 +255,14 @@ select {
   color: rgba(255, 255, 255, 0.88);
   font-size: 1.28rem;
   line-height: 1.45;
+}
+
+.hero__context {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .hero__actions,
@@ -935,6 +970,10 @@ select {
 
   .hero__lead {
     font-size: 1.1rem;
+  }
+
+  .hero__context {
+    font-size: 0.96rem;
   }
 
   .hero__actions,

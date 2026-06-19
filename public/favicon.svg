@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>ARC-1</title>
+  <rect width="64" height="64" rx="12" fill="#10231f" />
+  <path d="M16 45 29 15h6l13 30h-8l-2.4-6.2H26.3L24 45h-8Zm12.7-12.5h6.6L32 23.8l-3.3 8.7Z" fill="#93e6cd" />
+</svg>

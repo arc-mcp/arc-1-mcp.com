@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.5.0/schema.json",
   "files": {
-    "includes": ["**", "!dist", "!node_modules", "!public/posthog.js"]
+    "includes": ["**", "!.claude", "!dist", "!node_modules", "!public/posthog.js"]
   },
   "formatter": {
     "enabled": true,
