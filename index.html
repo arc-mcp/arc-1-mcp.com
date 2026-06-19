@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARC-1 - Open-source MCP for enterprise SAP ABAP systems</title>
+    <meta
+      name="description"
+      content="ARC-1 is a free, open-source ADT MCP server for SAP ABAP systems. It gives AI clients governed SAP system context, secure defaults, BTP deployment, per-user identity, auditability, and real ABAP development workflows."
+    />
+    <meta name="theme-color" content="#10231f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ARC-1 - Open-source MCP for enterprise SAP ABAP systems" />
+    <meta
+      property="og:description"
+      content="A governed bridge between AI clients and real SAP ABAP systems: secure defaults, BTP deployment, per-user identity, auditability, and production-minded workflows."
+    />
+    <meta property="og:url" content="https://arc-1-mcp.com/" />
+    <meta property="og:image" content="https://arc-1-mcp.com/assets/arc-1-cover.png" />
+    <link rel="canonical" href="https://arc-1-mcp.com/" />
+    <link rel="preload" as="image" href="/assets/arc-1-cover.png" />
+    <script src="/posthog.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-site-header>
+      <a class="brand" href="#top" aria-label="ARC-1 home">
+        <span class="brand__mark">A1</span>
+        <span class="brand__text">ARC-1</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation" data-site-nav>
+        <a href="#why">Why</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero__background" src="/assets/arc-1-cover.png" alt="" decoding="async" />
+        <div class="hero__shade"></div>
+        <div class="hero__content">
+          <p class="eyebrow">Free and open-source SAP ADT MCP server</p>
+          <h1 id="hero-title">ARC-1</h1>
+          <p class="hero__lead">
+            Governed SAP system context for AI assistants. ARC-1 connects Claude, GitHub Copilot, Copilot Studio,
+            Joule Studio, Cursor, VS Code, Eclipse, and any MCP client to real ABAP systems through a security-first
+            ADT gateway.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="https://github.com/arc-mcp/arc-1">View GitHub</a>
+            <a class="button button--light" href="https://docs.arc-1-mcp.com/">Read docs</a>
+            <a class="button button--ghost" href="#use-cases">Explore use cases</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="ARC-1 proof points">
+        <div class="proof-strip__item">
+          <strong>12</strong>
+          <span>intent-based tools instead of a sprawling endpoint list</span>
+        </div>
+        <div class="proof-strip__item">
+          <strong>3,474</strong>
+          <span>unit tests plus live SAP integration and E2E profiles</span>
+        </div>
+        <div class="proof-strip__item">
+          <strong>v0.9.19</strong>
+          <span>latest public release in the ARC-MCP GitHub org</span>
+        </div>
+        <div class="proof-strip__item">
+          <strong>116</strong>
+          <span>GitHub stars and growing community attention</span>
+        </div>
+      </section>
+
+      <section class="section section--white" id="why" aria-labelledby="why-title">
+        <div class="section__inner">
+          <div class="section-heading">
+            <p class="eyebrow">Why ARC-1</p>
+            <h2 id="why-title">AI for SAP needs an architecture, not another laptop script.</h2>
+            <p>
+              SAP development is not like editing a local web app. The useful context lives in ABAP objects, packages,
+              transports, dumps, ATC findings, CDS metadata, authorizations, tables, and system release state. ARC-1 is
+              built for that reality: controlled context first, governed action second.
+            </p>
+          </div>
+
+          <div class="value-grid">
+            <article class="value-card">
+              <span class="value-card__accent value-card__accent--green"></span>
+              <h3>Central control</h3>
+              <p>
+                Run one managed MCP endpoint per SAP system instead of letting every client, IDE, and user invent their
+                own credential path.
+              </p>
+            </article>
+            <article class="value-card">
+              <span class="value-card__accent value-card__accent--blue"></span>
+              <h3>Safe defaults</h3>
+              <p>
+                Read-only by default. Writes, table preview, SQL, transports, Git operations, and packages are explicit
+                opt-ins.
+              </p>
+            </article>
+            <article class="value-card">
+              <span class="value-card__accent value-card__accent--amber"></span>
+              <h3>Real identity</h3>
+              <p>
+                Use XSUAA, OIDC, API keys, BTP destinations, and Principal Propagation so SAP still sees the right user
+                where your landscape supports it.
+              </p>
+            </article>
+            <article class="value-card">
+              <span class="value-card__accent value-card__accent--red"></span>
+              <h3>Auditable by design</h3>
+              <p>
+                Structured audit events can go to stderr, file, or the BTP Audit Log Service. The system can answer who
+                called what.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" aria-labelledby="positioning-title">
+        <div class="section__inner split">
+          <div>
+            <p class="eyebrow">Product position</p>
+            <h2 id="positioning-title">The CIO case for ARC-1</h2>
+            <p>
+              ARC-1 is not positioned as a prompt trick. It is an open, inspectable access layer for SAP AI adoption. It
+              lets teams start with read-only value, prove the control model, then open carefully selected write paths
+              only where the operating model can support them.
+            </p>
+          </div>
+          <div class="decision-list">
+            <div>
+              <strong>Lower adoption risk</strong>
+              <span>Use existing SAP authorization, BTP identity, role collections, and audit services.</span>
+            </div>
+            <div>
+              <strong>Keep client choice open</strong>
+              <span>Serve Claude, Copilot, Joule, Cursor, VS Code, Eclipse, and future MCP clients from one endpoint.</span>
+            </div>
+            <div>
+              <strong>Protect productive systems</strong>
+              <span>Keep production read-only, allow sandbox and DEV writes selectively, and review every capability.</span>
+            </div>
+            <div>
+              <strong>Avoid black boxes</strong>
+              <span>The core product is open source, testable, and designed around explicit security gates.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--white" id="use-cases" aria-labelledby="use-cases-title">
+        <div class="section__inner">
+          <div class="section-heading section-heading--wide">
+            <p class="eyebrow">What ARC-1 is good for</p>
+            <h2 id="use-cases-title">Use cases that matter beyond a developer demo</h2>
+            <p>
+              The first value is read access: current system state, source, metadata, checks, dependencies, dumps, and
+              transport context. Write access can come later, in restricted systems and packages, after the organization
+              is comfortable with the control model.
+            </p>
+          </div>
+
+          <div class="use-case-grid">
+            <article class="use-case">
+              <h3>ABAP development assistance</h3>
+              <p>
+                Read source, search objects, edit methods, activate, run syntax checks, run ABAP Unit, inspect ATC, and
+                keep the AI grounded in the actual SAP system.
+              </p>
+            </article>
+            <article class="use-case">
+              <h3>Clean Core and modernization</h3>
+              <p>
+                Analyze custom code against release state and SAP guidance, identify direct table usage, build
+                modernization backlogs, and guide SEGW-to-RAP moves.
+              </p>
+            </article>
+            <article class="use-case">
+              <h3>Architecture and impact analysis</h3>
+              <p>
+                Turn change requests into technical risk views: dependencies, activation order, table impact, transport
+                requirements, and affected objects.
+              </p>
+            </article>
+            <article class="use-case">
+              <h3>Support and diagnostics</h3>
+              <p>
+                Connect weak tickets to ST22 dumps, source code, gateway messages, traces, package contents, and likely
+                root causes before a developer opens the IDE.
+              </p>
+            </article>
+            <article class="use-case">
+              <h3>Microsoft 365 and Joule agents</h3>
+              <p>
+                Reuse the same BTP-deployed ARC-1 endpoint from Copilot Studio, Teams, Microsoft 365 Copilot, and Joule
+                Studio without creating a separate SAP access model.
+              </p>
+            </article>
+            <article class="use-case">
+              <h3>GitHub workflow automation</h3>
+              <p>
+                Give PR checks and AI reviewers live SAP context for ABAP Unit, ATC, activated-source drift checks, and
+                read-only code review.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--media" aria-labelledby="proof-title">
+        <div class="section__inner">
+          <div class="section-heading section-heading--wide">
+            <p class="eyebrow">Evidence, not theater</p>
+            <h2 id="proof-title">Real workflows ARC-1 was built around</h2>
+            <p>
+              These examples come from the ARC-1 blog series and demo repositories: impact analysis in Copilot Studio,
+              Clean Core checks, RAP and Fiori elements modernization, and modern UI5 consumption of a generated RAP
+              service.
+            </p>
+          </div>
+          <div class="media-grid">
+            <figure class="media-tile media-tile--large">
+              <img src="/assets/copilot-impact-analysis.png" alt="Copilot Studio impact analysis for an ABAP domain change request" loading="lazy" />
+              <figcaption>Impact analysis from a SharePoint change request</figcaption>
+            </figure>
+            <figure class="media-tile">
+              <img src="/assets/copilot-clean-core.png" alt="Copilot Studio clean core readiness analysis with ARC-1 context" loading="lazy" />
+              <figcaption>Clean Core readiness with system evidence</figcaption>
+            </figure>
+            <figure class="media-tile">
+              <img src="/assets/rap-fiori-elements.png" alt="Fiori elements list report generated from a RAP OData V4 service" loading="lazy" />
+              <figcaption>SEGW to RAP to Fiori elements modernization</figcaption>
+            </figure>
+            <figure class="media-tile">
+              <img src="/assets/ui5-modern-ts.png" alt="Modern UI5 TypeScript app consuming the new RAP OData V4 service" loading="lazy" />
+              <figcaption>Modern UI5 TypeScript on top of RAP V4</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--white" id="architecture" aria-labelledby="architecture-title">
+        <div class="section__inner">
+          <div class="section-heading section-heading--wide">
+            <p class="eyebrow">Architecture</p>
+            <h2 id="architecture-title">One controlled SAP access layer for many AI clients</h2>
+            <p>
+              ARC-1 can run locally, in Docker, or as a BTP Cloud Foundry app. The enterprise pattern is central: one
+              endpoint, one safety ceiling, one audit path, and SAP authorizations still deciding what the backend user
+              may do.
+            </p>
+          </div>
+          <figure class="architecture-figure">
+            <img src="/assets/arc-1-btp-architecture.png" alt="ARC-1 on SAP BTP architecture with MCP clients, BTP services, Cloud Connector, and SAP ABAP systems" loading="lazy" />
+            <figcaption>Recommended operating model: ARC-1 on SAP BTP with XSUAA, Destination Service, Cloud Connector, and per-user SAP identity where possible.</figcaption>
+          </figure>
+
+          <div class="gate-grid">
+            <article>
+              <span>Gate 1</span>
+              <h3>Server ceiling</h3>
+              <p>Admin-controlled flags define what this ARC-1 instance can ever do.</p>
+            </article>
+            <article>
+              <span>Gate 2</span>
+              <h3>User permission</h3>
+              <p>Scopes, role collections, OIDC claims, or API-key profiles restrict the user.</p>
+            </article>
+            <article>
+              <span>Gate 3</span>
+              <h3>SAP authorization</h3>
+              <p>SAP still enforces S_DEVELOP, package, transport, table, and system permissions.</p>
+            </article>
+          </div>
+          <p class="formula">Effective permission = server ceiling AND user permission AND SAP authorization</p>
+        </div>
+      </section>
+
+      <section class="section section--muted" aria-labelledby="start-title">
+        <div class="section__inner split split--code">
+          <div>
+            <p class="eyebrow">Start small</p>
+            <h2 id="start-title">Install locally in minutes. Deploy centrally when the team is ready.</h2>
+            <p>
+              ARC-1 ships as an npm package, Docker image, Claude Desktop extension, Claude Code plugin, and BTP-ready
+              application. The right first pilot is usually read/search/diagnose against DEV or a sandbox.
+            </p>
+            <div class="inline-actions">
+              <a class="button button--primary" href="https://docs.arc-1-mcp.com/quickstart/">Quickstart</a>
+              <a class="button button--light" href="https://docs.arc-1-mcp.com/deployment/">Deployment docs</a>
+            </div>
+          </div>
+          <div class="code-panel">
+            <div class="code-panel__bar">
+              <span>terminal</span>
+              <button type="button" data-copy="npx arc-1@latest --url https://your-sap-host:44300 --user YOUR_USER">Copy</button>
+            </div>
+            <pre><code>npx arc-1@latest \
+  --url https://your-sap-host:44300 \
+  --user YOUR_USER</code></pre>
+            <pre><code>/plugin marketplace add arc-mcp/arc-1
+/plugin install arc-1@arc-1</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--white" id="ecosystem" aria-labelledby="ecosystem-title">
+        <div class="section__inner">
+          <div class="section-heading section-heading--wide">
+            <p class="eyebrow">ARC-MCP ecosystem</p>
+            <h2 id="ecosystem-title">ARC-1 is the flagship. The org is becoming a SAP AI toolkit.</h2>
+            <p>
+              The GitHub organization contains the core server, adjacent runtime pieces, samples, experiments, and
+              workflow demos. The landing page keeps ARC-1 first while making the wider ecosystem discoverable.
+            </p>
+          </div>
+
+          <div class="repo-grid">
+            <a class="repo-card repo-card--featured" href="https://github.com/arc-mcp/arc-1">
+              <span>Core product</span>
+              <h3>arc-1</h3>
+              <p>Enterprise-ready MCP server for SAP ABAP systems, with BTP deployment, safety gates, ADT tooling, and extensive tests.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/mcp-hub">
+              <span>Routing</span>
+              <h3>mcp-hub</h3>
+              <p>Deterministic multi-system MCP hub for SAP BTP: one login, per-environment routing to ARC-1 backends.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/arc-1-lsp">
+              <span>Sibling server</span>
+              <h3>arc-1-lsp</h3>
+              <p>MCP server for SAP ABAP that delegates ADT work to SAP's embedded adt-ls language server.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/adt-ls">
+              <span>SDK</span>
+              <h3>adt-ls</h3>
+              <p>TypeScript SDK over SAP's headless adt-ls, designed as reusable infrastructure for ABAP tooling.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/arc-1-extension-sample">
+              <span>Extensions</span>
+              <h3>arc-1-extension-sample</h3>
+              <p>Sample ARC-1 extension showing manifest tiers and live-verified extension patterns.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/arc1-adt-abap-mcp-ext">
+              <span>Eclipse</span>
+              <h3>arc1-adt-abap-mcp-ext</h3>
+              <p>Eclipse plugin that wakes SAP's dormant ADT MCP server and contributes read-only ABAP tools.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/arc1-transport-review-poc">
+              <span>CTS</span>
+              <h3>arc1-transport-review-poc</h3>
+              <p>Proof of concept for SAP CTS transport review pull requests.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/arc-1-segw-to-rap">
+              <span>Modernization</span>
+              <h3>arc-1-segw-to-rap</h3>
+              <p>SEGW to RAP and UI5 JavaScript to TypeScript/Fiori elements demo using MCP servers.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/arc-1-abap-cicd-review">
+              <span>Automation</span>
+              <h3>arc-1-abap-cicd-review</h3>
+              <p>End-to-end ABAP review workflow with GitHub Actions, abaplint, Copilot, Claude, and ARC-1.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/xsuaa-auth">
+              <span>Auth</span>
+              <h3>xsuaa-auth</h3>
+              <p>Authentication workbench for XSUAA-related SAP MCP deployment experiments.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--resources" id="resources" aria-labelledby="resources-title">
+        <div class="section__inner">
+          <div class="section-heading section-heading--wide">
+            <p class="eyebrow">Further reading</p>
+            <h2 id="resources-title">The product story is already written in public</h2>
+            <p>
+              ARC-1 grew out of a clear argument: AI in SAP succeeds when context, governance, identity, and workflow
+              quality are treated as architecture. These posts are the best path through that argument.
+            </p>
+          </div>
+
+          <div class="resource-list">
+            <a href="https://blog.zeis.de/posts/2026-04-20-how-i-use-ai/">
+              <span>Context first</span>
+              <strong>How I Use AI for Development and Why Context Matters</strong>
+            </a>
+            <a href="https://blog.zeis.de/posts/2026-04-22-ai-abap-development/">
+              <span>The ABAP gap</span>
+              <strong>ABAP and Agentic AI: The Hidden Problem in Real Projects</strong>
+            </a>
+            <a href="https://blog.zeis.de/posts/2026-04-27-arc-1/">
+              <span>Product thesis</span>
+              <strong>Introducing ARC-1: A Secure ADT MCP Server for Enterprise SAP Development</strong>
+            </a>
+            <a href="https://blog.zeis.de/posts/2026-04-29-arc-1-btp/">
+              <span>Enterprise deployment</span>
+              <strong>ARC-1 on SAP BTP: Secure ABAP Agentic Development Beyond the Laptop</strong>
+            </a>
+            <a href="https://blog.zeis.de/posts/2026-05-05-arc-1-copilot-studio/">
+              <span>Business users</span>
+              <strong>ARC-1 with Copilot Studio: SAP System Context Beyond Developers</strong>
+            </a>
+            <a href="https://blog.zeis.de/posts/2026-05-08-arc-1-joule-studio-clean-core/">
+              <span>SAP-native agents</span>
+              <strong>ARC-1 with Joule Studio: Bringing Real ABAP System Context into Joule</strong>
+            </a>
+            <a href="https://blog.zeis.de/posts/2026-05-11-segw-to-rap/">
+              <span>Modernization</span>
+              <strong>From SEGW and Legacy UI5 to RAP with ARC-1</strong>
+            </a>
+            <a href="https://blog.zeis.de/posts/2026-05-12-arc-1-abap-cicd-review/">
+              <span>GitHub workflows</span>
+              <strong>ABAP Development Automation with ARC-1 and GitHub Workflows</strong>
+            </a>
+            <a href="https://blog.zeis.de/posts/2026-06-01-mcp-api-policy/">
+              <span>Governance</span>
+              <strong>A Clearer View of Your SAP Integrations Under the New API Policy</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-title">
+        <div class="cta-band__inner">
+          <p class="eyebrow">Free, open source, inspectable</p>
+          <h2 id="cta-title">Give SAP AI a controlled path to the system it needs to understand.</h2>
+          <div class="hero__actions">
+            <a class="button button--primary" href="https://github.com/arc-mcp/arc-1">Start with the repo</a>
+            <a class="button button--light" href="https://docs.arc-1-mcp.com/install-in-claude/">Install guide</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>ARC-1</strong>
+        <span>Open-source MCP infrastructure for SAP ABAP systems.</span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="https://github.com/arc-mcp/arc-1">GitHub</a>
+        <a href="https://docs.arc-1-mcp.com/">Docs</a>
+        <a href="https://blog.zeis.de/tags/arc-1/">Blog</a>
+        <a href="https://www.npmjs.com/package/arc-1">npm</a>
+      </nav>
+      <small>&copy; <span data-year></span> ARC-MCP contributors.</small>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
