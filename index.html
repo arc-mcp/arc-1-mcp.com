@@ -291,27 +291,56 @@
       <section class="section section--muted" aria-labelledby="start-title">
         <div class="section__inner split split--code">
           <div>
-            <p class="eyebrow">Start small</p>
-            <h2 id="start-title">Install locally in minutes. Deploy centrally when the team is ready.</h2>
+            <p class="eyebrow">Quickstart</p>
+            <h2 id="start-title">Quickstart first. npx is a smoke test.</h2>
             <p>
-              ARC-1 ships as an npm package, Docker image, Claude Desktop extension, Claude Code plugin, and BTP-ready
-              application. The right first pilot is usually read/search/diagnose against DEV or a sandbox.
+              SAP URL, client, auth, TLS, and client wiring vary by landscape. The docs cover the read-only first run,
+              Claude install, local development, Docker, and BTP deployment.
             </p>
             <div class="inline-actions">
-              <a class="button button--primary" href="https://docs.arc-1-mcp.com/quickstart/">Quickstart</a>
+              <a class="button button--primary" href="https://docs.arc-1-mcp.com/quickstart/">Quickstart docs</a>
+              <a class="button button--light" href="https://docs.arc-1-mcp.com/install-in-claude/">Install in Claude</a>
               <a class="button button--light" href="https://docs.arc-1-mcp.com/deployment/">Deployment docs</a>
             </div>
           </div>
-          <div class="code-panel">
-            <div class="code-panel__bar">
-              <span>terminal</span>
-              <button type="button" data-copy="npx arc-1@latest --url https://your-sap-host:44300 --user YOUR_USER">Copy</button>
-            </div>
-            <pre><code>npx arc-1@latest \
+          <div class="quickstart-stack">
+            <nav class="quickstart-steps" aria-label="Quickstart path links">
+              <a href="https://docs.arc-1-mcp.com/quickstart/#1-verify-arc-1-can-reach-your-sap">
+                <span>1</span>
+                <strong>Verify SAP connectivity</strong>
+                <em>Full <code>npx</code> smoke test with URL, password, client, and TLS notes.</em>
+              </a>
+              <a href="https://docs.arc-1-mcp.com/quickstart/#2-wire-it-into-claude-desktop">
+                <span>2</span>
+                <strong>Wire in a client</strong>
+                <em>Read-only Claude Desktop config first, with other MCP clients linked from the docs.</em>
+              </a>
+              <a href="https://docs.arc-1-mcp.com/deployment/">
+                <span>3</span>
+                <strong>Move to a team endpoint</strong>
+                <em>Docker, BTP Cloud Foundry, BTP ABAP, identity, and deployment options.</em>
+              </a>
+            </nav>
+            <div class="code-panel code-panel--compact">
+              <div class="code-panel__bar">
+                <span>connectivity smoke test</span>
+                <button
+                  type="button"
+                  data-copy="npx arc-1@latest --url https://your-sap-host:44300 --user YOUR_USER --password YOUR_PASS --client 100"
+                >
+                  Copy
+                </button>
+              </div>
+              <pre><code>npx arc-1@latest \
   --url https://your-sap-host:44300 \
-  --user YOUR_USER</code></pre>
-            <pre><code>/plugin marketplace add arc-mcp/arc-1
-/plugin install arc-1@arc-1</code></pre>
+  --user YOUR_USER \
+  --password YOUR_PASS \
+  --client 100</code></pre>
+              <div class="code-panel__footer">
+                <a href="https://docs.arc-1-mcp.com/quickstart/">Full quickstart</a>
+                <a href="https://docs.arc-1-mcp.com/configuration-reference/">Configuration reference</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -573,6 +573,71 @@ select {
   align-items: center;
 }
 
+.quickstart-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.quickstart-steps {
+  display: grid;
+  gap: 10px;
+}
+
+.quickstart-steps a {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 4px 14px;
+  align-items: start;
+  padding: 16px 18px;
+  border: 1px solid rgba(16, 35, 31, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.quickstart-steps a:hover,
+.quickstart-steps a:focus-visible {
+  border-color: rgba(15, 122, 95, 0.42);
+  background: #fff;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.quickstart-steps span {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid rgba(15, 122, 95, 0.22);
+  border-radius: 8px;
+  background: #edf8f3;
+  color: var(--green-dark);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.quickstart-steps strong {
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.quickstart-steps em {
+  grid-column: 2;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.quickstart-steps code {
+  color: var(--green-dark);
+  font-weight: 800;
+}
+
 .code-panel {
   overflow: hidden;
   border: 1px solid #172f2b;
@@ -619,6 +684,25 @@ select {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
   font-size: 0.92rem;
   line-height: 1.65;
+}
+
+.code-panel--compact pre {
+  border-bottom: 0;
+}
+
+.code-panel__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding: 0 20px 20px;
+}
+
+.code-panel__footer a {
+  color: #d7fff2;
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .repo-grid {
