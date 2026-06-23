@@ -37,6 +37,7 @@
       <nav class="site-nav" aria-label="Primary navigation" data-site-nav>
         <a href="#executive">Executive</a>
         <a href="#use-cases">Use cases</a>
+        <a href="#live-demo">Live demo</a>
         <a href="#architecture">Security</a>
         <a href="#start">Start</a>
         <a href="#resources">Resources</a>
@@ -60,6 +61,7 @@
           </p>
           <div class="hero__actions">
             <a class="button button--primary" href="#executive">See the executive case</a>
+            <a class="button button--light" href="https://live-arc-1.arc-1-mcp.com/">Try the live replay</a>
             <a class="button button--light" href="https://github.com/arc-mcp/arc-1">View GitHub repo</a>
           </div>
         </div>
@@ -81,6 +83,48 @@
         <div class="proof-strip__item">
           <strong>Inspectable OSS</strong>
           <span>Public TypeScript code, docs, npm package, Docker image, and CI.</span>
+        </div>
+      </section>
+
+      <section class="section section--live" id="live-demo" aria-labelledby="live-demo-title">
+        <div class="section__inner live-demo">
+          <div class="live-demo__copy">
+            <p class="eyebrow">Replay sandbox</p>
+            <h2 id="live-demo-title">See ARC-1 workflows without connecting your SAP system.</h2>
+            <p>
+              The hosted replay demo is a static, low-cost way to explore what ARC-1 makes possible across VS Code,
+              Claude, Teams, Outlook, Copilot, SharePoint, and GitHub-style workflows. It shows the assistant flow,
+              ARC-1 tool calls, supporting MCP calls, and the evidence history behind each answer.
+            </p>
+            <div class="inline-actions">
+              <a class="button button--primary" href="https://live-arc-1.arc-1-mcp.com/">Open live replay</a>
+              <a class="button button--light" href="https://live-arc-1.arc-1-mcp.com/scenarios/teams-sharepoint-impact/">SharePoint impact scenario</a>
+              <a class="button button--light" href="https://github.com/arc-mcp/live-arc-1">Demo source</a>
+            </div>
+          </div>
+          <div class="live-demo__panel">
+            <div class="live-demo__bar">
+              <span>live-arc-1.arc-1-mcp.com</span>
+              <strong>Replay only</strong>
+            </div>
+            <div class="live-demo__body">
+              <div class="live-demo__scenario">
+                <span>Teams + SharePoint</span>
+                <strong>Business memo to SAP impact chain</strong>
+                <em>SharePoint request, ARC-1 dependency evidence, collapsed history.</em>
+              </div>
+              <div class="live-demo__scenario">
+                <span>VS Code</span>
+                <strong>SEGW to RAP and UI5 modernization</strong>
+                <em>RAP object plan, tool calls, branchable UI target decisions.</em>
+              </div>
+              <div class="live-demo__scenario">
+                <span>Claude</span>
+                <strong>SAP dependency graph exploration</strong>
+                <em>Graph-first evidence with where-used overlays and validation gates.</em>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -402,6 +446,11 @@
               <span>Modernization - Demo</span>
               <h3>arc-1-segw-to-rap</h3>
               <p>SEGW to RAP and UI5 JavaScript to TypeScript/Fiori elements demo using MCP servers.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/arc-mcp/live-arc-1">
+              <span>Showcase - Live</span>
+              <h3>live-arc-1</h3>
+              <p>Hosted replay sandbox for ARC-1 scenarios across developer, business, Microsoft 365, Claude, and modernization workflows.</p>
             </a>
             <a class="repo-card" href="https://github.com/arc-mcp/arc-1-abap-cicd-review">
               <span>Automation - Demo</span>
