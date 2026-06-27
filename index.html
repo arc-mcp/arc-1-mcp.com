@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ARC-1 - Open-source MCP for enterprise SAP ABAP systems</title>
+    <title>ARC-1 - MCP for SAP BTP ABAP, S/4HANA Cloud, and on-prem ABAP</title>
     <meta
       name="description"
-      content="ARC-1 is a free, open-source, self-hosted MCP gateway for governed enterprise AI access to SAP ABAP systems. It keeps SAP identity, authorization, audit, and operating controls in charge."
+      content="ARC-1 is a free, open-source, self-hosted MCP gateway for governed enterprise AI access to SAP BTP ABAP environment, SAP S/4HANA Cloud Public and Private Edition, and on-prem ABAP systems from 7.40."
     />
     <meta name="theme-color" content="#10231f" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ARC-1 - Open-source MCP for enterprise SAP ABAP systems" />
+    <meta property="og:title" content="ARC-1 - MCP for SAP BTP ABAP, S/4HANA Cloud, and on-prem ABAP" />
     <meta
       property="og:description"
-      content="A self-hosted, governed bridge between AI clients and SAP ABAP systems: secure defaults, BTP deployment, per-user identity, auditability, and production-minded workflows."
+      content="A self-hosted, governed bridge between AI clients and SAP ABAP landscapes: BTP ABAP environment, S/4HANA Cloud Public and Private Edition, and on-prem ABAP from 7.40."
     />
     <meta property="og:url" content="https://arc-1-mcp.com/" />
     <meta property="og:image" content="https://arc-1-mcp.com/assets/arc-1-cover.png" />
@@ -36,6 +36,7 @@
       </button>
       <nav class="site-nav" aria-label="Primary navigation" data-site-nav>
         <a href="#executive">Executive</a>
+        <a href="#landscapes">Landscapes</a>
         <a href="#use-cases">Use cases</a>
         <a href="#live-demo">Live demo</a>
         <a href="#architecture">Security</a>
@@ -57,7 +58,8 @@
           </p>
           <p class="hero__context">
             MCP is the open protocol for connecting AI assistants to enterprise systems. ARC-1 is the governed SAP
-            implementation.
+            implementation for BTP ABAP environment, SAP S/4HANA Cloud Public and Private Edition, and on-prem ABAP
+            from 7.40.
           </p>
           <div class="hero__actions">
             <a class="button button--primary" href="#executive">See the executive case</a>
@@ -69,8 +71,8 @@
 
       <section class="proof-strip proof-strip--outcomes" aria-label="ARC-1 proof points">
         <div class="proof-strip__item">
-          <strong>Self-hosted</strong>
-          <span>Runs locally, in Docker, or on SAP BTP. No ARC-1 SaaS hop.</span>
+          <strong>Landscape-ready</strong>
+          <span>BTP ABAP, S/4HANA Cloud Public or Private Edition, and on-prem ABAP 7.40+.</span>
         </div>
         <div class="proof-strip__item">
           <strong>Read-only first</strong>
@@ -83,6 +85,55 @@
         <div class="proof-strip__item">
           <strong>Inspectable OSS</strong>
           <span>Public TypeScript code, docs, npm package, Docker image, and CI.</span>
+        </div>
+      </section>
+
+      <section class="section section--white" id="landscapes" aria-labelledby="landscapes-title">
+        <div class="section__inner">
+          <div class="section-heading section-heading--wide">
+            <p class="eyebrow">Supported SAP landscapes</p>
+            <h2 id="landscapes-title">One governed MCP layer for modern and classic ABAP systems.</h2>
+            <p>
+              ARC-1 is not tied to one SAP runtime. The same intent tools and safety model cover cloud-first ABAP,
+              public and private S/4HANA Cloud landscapes, and established on-premise systems, with authentication and
+              deployment configured for each environment.
+            </p>
+          </div>
+
+          <div class="landscape-grid">
+            <article class="landscape-card">
+              <span class="landscape-card__tag">BTP-native</span>
+              <h3>SAP BTP ABAP environment</h3>
+              <p>
+                Connect cloud ABAP development systems with BTP-aware authentication, service-key setup paths, and the
+                same read/write gates used everywhere else.
+              </p>
+            </article>
+            <article class="landscape-card">
+              <span class="landscape-card__tag landscape-card__tag--blue">Public cloud</span>
+              <h3>SAP S/4HANA Cloud Public Edition</h3>
+              <p>
+                Support S/4HANA Public Cloud access through SAP-supported identity and ADT paths while respecting
+                public-cloud boundaries and SAP authorization.
+              </p>
+            </article>
+            <article class="landscape-card">
+              <span class="landscape-card__tag landscape-card__tag--amber">Private cloud</span>
+              <h3>SAP S/4HANA Cloud Private Edition</h3>
+              <p>
+                Use ARC-1 with managed private-cloud systems through central endpoints, network routing, Cloud
+                Connector, and per-user identity where available.
+              </p>
+            </article>
+            <article class="landscape-card">
+              <span class="landscape-card__tag landscape-card__tag--dark">On-prem</span>
+              <h3>ABAP systems from 7.40</h3>
+              <p>
+                Keep classic NetWeaver and S/4HANA on-premise systems in scope, from local smoke tests to shared Docker
+                or BTP-hosted team deployments.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -306,7 +357,8 @@
             <p class="eyebrow">Security architecture</p>
             <h2 id="architecture-title">One controlled SAP access layer. Three gates before action.</h2>
             <p>
-              ARC-1 can run locally, in Docker, or as a BTP Cloud Foundry app. The enterprise pattern is central: one
+              ARC-1 can run locally, in Docker, or as a BTP Cloud Foundry app, then connect to BTP ABAP environment,
+              S/4HANA Cloud Public or Private Edition, and on-prem ABAP. The enterprise pattern is central: one
               endpoint, one safety ceiling, one audit path, and SAP authorizations still deciding what the backend user
               may do.
             </p>
@@ -344,7 +396,7 @@
             <h2 id="start-title">Quickstart first. npx is a smoke test.</h2>
             <p>
               SAP URL, client, auth, TLS, and client wiring vary by landscape. The docs cover the read-only first run,
-              Claude install, local development, Docker, and BTP deployment.
+              Claude install, local development, Docker, BTP deployment, and cloud-specific SAP auth paths.
             </p>
             <div class="inline-actions">
               <a class="button button--primary" href="https://docs.arc-1-mcp.com/quickstart/">Quickstart docs</a>
@@ -367,7 +419,7 @@
               <a href="https://docs.arc-1-mcp.com/deployment/">
                 <span>3</span>
                 <strong>Move to a team endpoint</strong>
-                <em>Docker, BTP Cloud Foundry, BTP ABAP, identity, and deployment options.</em>
+                <em>Docker, BTP Cloud Foundry, BTP ABAP, S/4HANA Cloud, identity, and deployment options.</em>
               </a>
             </nav>
             <div class="code-panel code-panel--compact">
@@ -410,7 +462,7 @@
             <a class="repo-card repo-card--featured" href="https://github.com/arc-mcp/arc-1">
               <span>Core product - Stable</span>
               <h3>arc-1</h3>
-              <p>Enterprise-ready MCP server for SAP ABAP systems, with BTP deployment, safety gates, ADT tooling, and extensive tests.</p>
+              <p>Enterprise-ready MCP server for BTP ABAP, S/4HANA Cloud, and on-prem ABAP, with safety gates, ADT tooling, and extensive tests.</p>
             </a>
             <a class="repo-card" href="https://github.com/arc-mcp/mcp-hub">
               <span>Routing - Beta</span>
@@ -533,7 +585,7 @@
     <footer class="site-footer">
       <div>
         <strong>ARC-1</strong>
-        <span>Open-source MCP infrastructure for SAP ABAP systems.</span>
+        <span>Open-source MCP infrastructure for SAP BTP ABAP, S/4HANA Cloud, and on-prem ABAP.</span>
       </div>
       <nav aria-label="Footer navigation">
         <a href="https://github.com/arc-mcp/arc-1">GitHub</a>

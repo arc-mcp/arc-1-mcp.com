@@ -514,6 +514,7 @@ select {
 
 .value-grid,
 .use-case-grid,
+.landscape-grid,
 .repo-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -522,6 +523,7 @@ select {
 
 .value-card,
 .use-case,
+.landscape-card,
 .repo-card,
 .gate-grid article {
   border: 1px solid var(--line);
@@ -570,6 +572,7 @@ select {
 
 .value-card p,
 .use-case p,
+.landscape-card p,
 .repo-card p,
 .gate-grid p {
   margin: 14px 0 0;
@@ -612,6 +615,51 @@ select {
 
 .use-case-grid {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.landscape-card {
+  min-height: 260px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(15, 122, 95, 0.08), transparent 46%), var(--paper);
+}
+
+.landscape-card__tag {
+  display: inline-flex;
+  margin-bottom: 28px;
+  padding: 5px 9px;
+  border: 1px solid rgba(15, 122, 95, 0.22);
+  border-radius: 999px;
+  background: #edf8f3;
+  color: var(--green-dark);
+  font-size: 0.72rem;
+  font-weight: 850;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.landscape-card__tag--blue {
+  border-color: rgba(36, 91, 220, 0.24);
+  background: #eef4ff;
+  color: #1d48ae;
+}
+
+.landscape-card__tag--amber {
+  border-color: rgba(197, 121, 22, 0.26);
+  background: #fff5e6;
+  color: #87500d;
+}
+
+.landscape-card__tag--dark {
+  border-color: rgba(16, 35, 31, 0.18);
+  background: #edf0ee;
+  color: var(--ink);
+}
+
+.landscape-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  letter-spacing: 0;
 }
 
 .use-case {
@@ -970,6 +1018,7 @@ select {
 @media (max-width: 1020px) {
   .proof-strip,
   .value-grid,
+  .landscape-grid,
   .repo-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1092,6 +1141,7 @@ select {
   .proof-strip,
   .value-grid,
   .use-case-grid,
+  .landscape-grid,
   .repo-grid,
   .resource-list,
   .gate-grid {
@@ -1127,6 +1177,7 @@ select {
 
   .value-card,
   .use-case,
+  .landscape-card,
   .repo-card {
     min-height: auto;
   }
